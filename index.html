@@ -1,144 +1,180 @@
 <html>
+    <head>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
-<head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.0.3/luxon.min.js"></script>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
 
-        $font-color: #2E294E;
-        
-        body{
-            background: url("https://res.cloudinary.com/devolver-digital/image/upload/v1635831831/mothership/gris/GRIS_03_Screenshot1.jpg"); 
-            color: $font-color;
-            font-family: 'Poppins', sans-serif;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        
-        .countdown--container{
-            position: absolute;
-            top: 50%;
-            left:250px;
-            height:250px;
-            width:700px;
-            margin-top: -200px;
-            margin-left: -200px;
-            border-radius: 2px;
-            overflow: hidden;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .countdown--date-text{
-            font-size:112px;
-            font-weight:bold;
-        }
-        
-        .countdown--data-container{
-            display:flex;
-            justify-content: space-between;
-            width:560px;
-            text-align: center;
-        }
-        
-        .countdown--heading-container{
-            font-weight:bold;
-            font-size:20px;
-        }
-    </style>
-</head>
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 20px;
+  background: #eee;
+  min-height: 100vh;
+  gap: 15px;
+}
 
-<body>
-     
-    <script type="text/javascript">
-        const body = document.body
-      content = document.createElement('main'),
-      countdownContainer = document.createElement('div'),
-      countdownDataContainer = document.createElement('div'),
-      headingContainer = document.createElement('div'),
-      headingText = document.createElement('h1'),
-      dayContainer = document.createElement('div'),
-      hourContainer = document.createElement('div'),
-      minuteContainer = document.createElement('div'),
-      secondContainer = document.createElement('div'),
-      dayContainerDateText = document.createElement('div'),
-      hourContainerDateText = document.createElement('div'),
-      minuteContainerDateText = document.createElement('div'),
-      secondContainerDateText = document.createElement('div'),
-      dayTextContainer = document.createElement('div'),
-      hourTextContainer = document.createElement('div'),
-      minuteTextContainer = document.createElement('div'),
-      secondTextContainer = document.createElement('div'),
-      dayPara = document.createElement('p'),
-      hourPara = document.createElement('p'),
-      minutePara = document.createElement('p'),
-      secondPara = document.createElement('p');
+.container .content {
+  flex: 1 1 400px;
+}
 
-body.append(content);
-headingContainer.append(headingText);
-countdownDataContainer.append(dayContainer, hourContainer, minuteContainer,secondContainer)
-countdownContainer.append(headingContainer,countdownDataContainer);
-content.append(countdownContainer);
+.container .image {
+  flex: 1 1 400px;
+}
 
-dayContainer.append(dayContainerDateText,dayTextContainer);
-hourContainer.append(hourContainerDateText, hourTextContainer);
-minuteContainer.append(minuteContainerDateText, minuteTextContainer);
-secondContainer.append(secondContainerDateText, secondTextContainer);
+.container .image img {
+  width: 100%;
+}
 
-headingText.textContent = 'NEW YEAR';
-dayPara.textContent = 'DAYS'
-hourPara.textContent = 'HOURS'
-minutePara.textContent = 'MINUTES';
-secondPara.textContent = 'SECONDS';
+.container .content .title {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #2980b9;
+}
 
-dayTextContainer.append(dayPara);
-hourTextContainer.append(hourPara);
-minuteTextContainer.append(minutePara);
-secondTextContainer.append(secondPara);
+.container .content p {
+  color: #666;
+  padding: 5px 0;
+}
 
-content.classList.add('main--content-container');
-countdownContainer.classList.add('countdown--container');
-headingContainer.classList.add('countdown--heading-container');
-countdownDataContainer.classList.add('countdown--data-container');
-dayContainer.classList.add('countdown--day-container');
-hourContainer.classList.add('countdown--hour-container');
-minuteContainer.classList.add('countdown--minute-container');
-secondContainer.classList.add('countdown--seconds-container');
-dayContainerDateText.classList.add('countdown--date-text');
-hourContainerDateText.classList.add('countdown--date-text');
-minuteContainerDateText.classList.add('countdown--date-text');
-secondContainerDateText.classList.add('countdown--date-text');
+.container .content .count-down {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+}
 
-const DateTime = luxon.DateTime,
-      Interval = luxon.Interval;
-      hoursInDay = 24,
-      minutesInHour = 60,
-      secondsInMinute = 60;
+.container .content .count-down .box {
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #3333;
+  text-align: center;
+  flex: 1 1 20px;
+}
 
-const addZero = time => time < 10 ? `0${time}` : `${time}`; 
+.container .content .count-down .box h3 {
+  font-size: 50px;
+  color: #333;
+}
 
-const timeData = () => {
-    let currentYear = DateTime.now().year,
-        yearGoal = currentYear + 1, // will always take into account the fact that years pass
-        now = DateTime.now(),
-        later = DateTime.local(yearGoal, 01, 01),
-        i = Interval.fromDateTimes(now,later),
-        currentHour = hoursInDay - now.hour,
-        currentMinutes = minutesInHour - now.minute,
-        currentSeconds = secondsInMinute - now.second;
-    const showTime = () => {
-        dayContainerDateText.innerHTML = `<p>${addZero(i.length('days').toFixed(0))}:</p>`;
-        hourContainerDateText.innerHTML = `<p>${addZero(currentHour)}:</p>`;
-        minuteContainerDateText.innerHTML = `<p>${addZero(currentMinutes)}:</p>`;
-        secondContainerDateText.innerHTML = `<p>${addZero(currentSeconds)}</p>`;
-    }
-    showTime();
-};
+.container .content .count-down .box span {
+  color: #2980b9;
+  font-size: 20px;
+}
 
-setInterval( () => timeData(), 1000);
+.container .content .btn {
+  display: inline-block;
+  padding: 8px 50px;
+  margin: 10px 0;
+  font-size: 17px;
+  background: #2980b9;
+  color: #fff;
+  transition: 0.2s ease-out;
+}
 
-window.onload = () => timeData();
-    </script>
-</body>
+.container .content .btn:hover {
+  letter-spacing: 2px;
+}
 
+@media (max-width: 500px) {
+  .container {
+    padding: 0px 20px;
+  }
+  .container .content {
+    text-align: center;
+  }
+  .container .content .title {
+    font-size: 30px;
+  }
+  .container .content p {
+    font-size: 15px;
+  }
+  .container .content .count-down {
+    gap: 5px;
+  }
+  .container .content .count-down .box h3 {
+    font-size: 25px;
+  }
+  .container .content .count-down .box span {
+    font-size: 15px;
+  }
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+          <div class="content">
+            <h3 class="title">Manya Investment</h3>
+            <h4 class="title">Website coming very soon</h4>
+            <p>Financial planning requires you to gather all your financial info in one place. This exercise itself becomes an eye-opener for many and becomes the first step towards a better and organized financial life.</p>
+            <p>
+                    <ul style="margin-left:20px;">
+                        <li>Mutual Fund</li>
+                        <li>Accounting, Taxation, GST</li>
+                        <li>Insurances</li>
+                    </ul>
+            </p>
+            <div class="count-down">
+              <div class="box">
+                <h3 id="day">00</h3>
+                <span>day</span>
+              </div>
+              <div class="box">
+                <h3 id="hour">00</h3>
+                <span>Hour</span>
+              </div>
+              <div class="box">
+                <h3 id="mintue">00</h3>
+                <span>Mintue</span>
+              </div>
+              <div class="box">
+                <h3 id="second">00</h3>
+                <span>Second</span>
+              </div>
+            </div>
+            <a href="https://wa.me/message/RKUZGNCUMOBNG1" class="btn">Notify Me</a>
+          </div>
+      
+          <div class="image">
+            <img src="https://i.postimg.cc/sXBRNC9V/image.png" alt="">
+          </div>
+        </div>
+        <script>
+            let countDate = new Date("jan 1, 2023 00:00:00").getTime();
+
+function countDown() {
+  let now = new Date().getTime();
+  gap = countDate - now;
+
+  let second = 1000;
+  let mintue = second * 60;
+  let hour = mintue * 60;
+  let day = hour * 24;
+
+  let d = Math.floor(gap / day);
+  let h = Math.floor((gap % day) / hour);
+  let m = Math.floor((gap % hour) / mintue);
+  let s = Math.floor((gap % mintue) / second);
+
+  document.getElementById("day").innerText = d;
+  document.getElementById("hour").innerText = h;
+  document.getElementById("mintue").innerText = m;
+  document.getElementById("second").innerText = s;
+}
+
+setInterval(function () {
+  countDown();
+}, 1000);
+
+        </script>
+      </body>
 </html>
