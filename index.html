@@ -1,180 +1,190 @@
 <html>
-    <head>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  text-transform: capitalize;
-}
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
-.container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0px 20px;
-  background: #eee;
-  min-height: 100vh;
-  gap: 15px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Nunito", sans-serif;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
 
-.container .content {
-  flex: 1 1 400px;
-}
+        .container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0px 20px;
+            background: #eee;
+            min-height: 100vh;
+            gap: 15px;
+        }
 
-.container .image {
-  flex: 1 1 400px;
-}
+        .container .content {
+            flex: 1 1 400px;
+        }
 
-.container .image img {
-  width: 100%;
-}
+        .container .image {
+            flex: 1 1 400px;
+        }
 
-.container .content .title {
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #2980b9;
-}
+        .container .image img {
+            width: 100%;
+        }
 
-.container .content p {
-  color: #666;
-  padding: 5px 0;
-}
+        .container .content .title {
+            font-size: 45px;
+            text-transform: uppercase;
+            color: #2980b9;
+        }
 
-.container .content .count-down {
-  display: flex;
-  gap: 15px;
-  padding: 10px 0;
-}
+        .container .content p {
+            color: #666;
+            padding: 5px 0;
+        }
 
-.container .content .count-down .box {
-  padding: 5px;
-  background: #fff;
-  border: 1px solid #3333;
-  text-align: center;
-  flex: 1 1 20px;
-}
+        .container .content .count-down {
+            display: flex;
+            gap: 15px;
+            padding: 10px 0;
+        }
 
-.container .content .count-down .box h3 {
-  font-size: 50px;
-  color: #333;
-}
+        .container .content .count-down .box {
+            padding: 5px;
+            background: #fff;
+            border: 1px solid #3333;
+            text-align: center;
+            flex: 1 1 20px;
+        }
 
-.container .content .count-down .box span {
-  color: #2980b9;
-  font-size: 20px;
-}
+        .container .content .count-down .box h3 {
+            font-size: 50px;
+            color: #333;
+        }
 
-.container .content .btn {
-  display: inline-block;
-  padding: 8px 50px;
-  margin: 10px 0;
-  font-size: 17px;
-  background: #2980b9;
-  color: #fff;
-  transition: 0.2s ease-out;
-}
+        .container .content .count-down .box span {
+            color: #2980b9;
+            font-size: 20px;
+        }
 
-.container .content .btn:hover {
-  letter-spacing: 2px;
-}
+        .container .content .btn {
+            display: inline-block;
+            padding: 8px 50px;
+            margin: 10px 0;
+            font-size: 17px;
+            background: #2980b9;
+            color: #fff;
+            transition: 0.2s ease-out;
+        }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 0px 20px;
-  }
-  .container .content {
-    text-align: center;
-  }
-  .container .content .title {
-    font-size: 30px;
-  }
-  .container .content p {
-    font-size: 15px;
-  }
-  .container .content .count-down {
-    gap: 5px;
-  }
-  .container .content .count-down .box h3 {
-    font-size: 25px;
-  }
-  .container .content .count-down .box span {
-    font-size: 15px;
-  }
-}
+        .container .content .btn:hover {
+            letter-spacing: 2px;
+        }
 
-        </style>
-    </head>
-    <body>
-        <div class="container">
-          <div class="content">
+        @media (max-width: 500px) {
+            .container {
+                padding: 0px 20px;
+            }
+
+            .container .content {
+                text-align: center;
+            }
+
+            .container .content .title {
+                font-size: 30px;
+            }
+
+            .container .content p {
+                font-size: 15px;
+            }
+
+            .container .content .count-down {
+                gap: 5px;
+            }
+
+            .container .content .count-down .box h3 {
+                font-size: 25px;
+            }
+
+            .container .content .count-down .box span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
             <h3 class="title">Manya Investment</h3>
             <h4 class="title">Website coming very soon</h4>
-            <p>Financial planning requires you to gather all your financial info in one place. This exercise itself becomes an eye-opener for many and becomes the first step towards a better and organized financial life.</p>
+            <p>Financial planning requires you to gather all your financial info in one place. This exercise itself
+                becomes an eye-opener for many and becomes the first step towards a better and organized financial life.
+            </p>
             <p>
-                    <ul style="margin-left:20px;">
-                        <li>Mutual Fund</li>
-                        <li>Accounting, Taxation, GST</li>
-                        <li>Insurances</li>
-                    </ul>
+            <ul style="margin-left:20px;">
+                <li>Mutual Fund</li>
+                <li>Accounting, Taxation, GST</li>
+                <li>Insurances</li>
+            </ul>
             </p>
             <div class="count-down">
-              <div class="box">
-                <h3 id="day">00</h3>
-                <span>day</span>
-              </div>
-              <div class="box">
-                <h3 id="hour">00</h3>
-                <span>Hour</span>
-              </div>
-              <div class="box">
-                <h3 id="mintue">00</h3>
-                <span>Mintue</span>
-              </div>
-              <div class="box">
-                <h3 id="second">00</h3>
-                <span>Second</span>
-              </div>
+                <div class="box">
+                    <h3 id="day">00</h3>
+                    <span>day</span>
+                </div>
+                <div class="box">
+                    <h3 id="hour">00</h3>
+                    <span>Hour</span>
+                </div>
+                <div class="box">
+                    <h3 id="mintue">00</h3>
+                    <span>Mintue</span>
+                </div>
+                <div class="box">
+                    <h3 id="second">00</h3>
+                    <span>Second</span>
+                </div>
             </div>
             <a href="https://wa.me/message/RKUZGNCUMOBNG1" class="btn">Notify Me</a>
-          </div>
-      
-          <div class="image">
-            <img src="https://i.postimg.cc/sXBRNC9V/image.png" alt="">
-          </div>
         </div>
-        <script>
-            let countDate = new Date("jan 1, 2023 00:00:00").getTime();
 
-function countDown() {
-  let now = new Date().getTime();
-  gap = countDate - now;
+        <div class="image">
+            <img src="https://i.postimg.cc/sXBRNC9V/image.png" alt="">
+        </div>
+    </div>
+    <script>
+        let countDate = new Date("jan 1, 2023 00:00:00").getTime();
 
-  let second = 1000;
-  let mintue = second * 60;
-  let hour = mintue * 60;
-  let day = hour * 24;
+        function countDown() {
+            let now = new Date().getTime();
+            gap = countDate - now;
 
-  let d = Math.floor(gap / day);
-  let h = Math.floor((gap % day) / hour);
-  let m = Math.floor((gap % hour) / mintue);
-  let s = Math.floor((gap % mintue) / second);
+            let second = 1000;
+            let mintue = second * 60;
+            let hour = mintue * 60;
+            let day = hour * 24;
 
-  document.getElementById("day").innerText = d;
-  document.getElementById("hour").innerText = h;
-  document.getElementById("mintue").innerText = m;
-  document.getElementById("second").innerText = s;
-}
+            let d = Math.floor(gap / day);
+            let h = Math.floor((gap % day) / hour);
+            let m = Math.floor((gap % hour) / mintue);
+            let s = Math.floor((gap % mintue) / second);
 
-setInterval(function () {
-  countDown();
-}, 1000);
+            document.getElementById("day").innerText = d;
+            document.getElementById("hour").innerText = h;
+            document.getElementById("mintue").innerText = m;
+            document.getElementById("second").innerText = s;
+        }
 
-        </script>
-      </body>
+        setInterval(function () {
+            countDown();
+        }, 1000);
+
+    </script>
+</body>
+
 </html>
