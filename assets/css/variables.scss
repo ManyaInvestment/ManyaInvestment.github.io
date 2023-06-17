@@ -1,0 +1,291 @@
+$color_1: var(--color-default);
+$color_2: var(--color-links);
+$color_3: var(--color-links-hover);
+$color_4: var(--color-primary);
+$color_5: var(--color-primary-light);
+$color_6: var(--color-primary-dark);
+$color_7: var(--color-secondary);
+$color_8: var(--color-secondary-light);
+$color_9: var(--color-secondary-dark);
+$color_10: var(--color-blue);
+$color_11: var(--color-indigo);
+$color_12: var(--color-purple);
+$color_13: var(--color-pink);
+$color_14: var(--color-red);
+$color_15: var(--color-orange);
+$color_16: var(--color-yellow);
+$color_17: var(--color-green);
+$color_18: var(--color-teal);
+$color_19: var(--color-cyan);
+$color_20: var(--color-white);
+$color_21: var(--color-gray);
+$color_22: var(--color-black);
+$font-family_1: var(--font-default);
+$font-family_2: var(--font-primary);
+$font-family_3: var(--font-secondary);
+$background-color_1: var(--color-default);
+$background-color_2: var(--color-primary);
+$background-color_3: var(--color-primary-light);
+$background-color_4: var(--color-primary-dark);
+$background-color_5: var(--color-secondary);
+$background-color_6: var(--color-secondary-light);
+$background-color_7: var(--color-secondary-dark);
+$background-color_8: var(--color-blue);
+$background-color_9: var(--color-indigo);
+$background-color_10: var(--color-purple);
+$background-color_11: var(--color-pink);
+$background-color_12: var(--color-red);
+$background-color_13: var(--color-orange);
+$background-color_14: var(--color-yellow);
+$background-color_15: var(--color-green);
+$background-color_16: var(--color-teal);
+$background-color_17: var(--color-cyan);
+$background-color_18: var(--color-white);
+$background-color_19: var(--color-gray);
+$background-color_20: var(--color-black);
+
+/*--------------------------------------------------------------
+# 1. HeroBiz template variables 
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# 2. Override default Bootstrap variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# 3. Set color and background class names
+--------------------------------------------------------------*/
+/* Fonts */
+/* Text Colors */
+/* Background Colors */
+&:root {
+	--font-default: 'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-primary: 'Source Sans Pro', sans-serif;
+	--font-secondary: 'Poppins', sans-serif;
+	--color-default: #1a1f24;
+	--color-default-rgb: 26, 31, 36;
+	--color-links: #0ea2bd;
+	--color-links-hover: #1ec3e0;
+	--color-primary: #0ea2bd;
+	--color-primary-light: #1ec3e0;
+	--color-primary-dark: #0189a1;
+	--color-primary-rgb: 14, 162, 189;
+	--color-primary-light-rgb: 30, 195, 224;
+	--color-primary-dark-rgb: 1, 137, 161;
+	--color-secondary: #485664;
+	--color-secondary-light: #8f9fae;
+	--color-secondary-dark: #3a4753;
+	--color-secondary-rgb: 72, 86, 100;
+	--color-secondary-light-rgb: 143, 159, 174;
+	--color-secondary-dark-rgb: 58, 71, 83;
+	--color-blue: #0d6efd;
+	--color-blue-rgb: 13, 110, 253;
+	--color-indigo: #6610f2;
+	--color-indigo-rgb: 102, 16, 242;
+	--color-purple: #6f42c1;
+	--color-purple-rgb: 111, 66, 193;
+	--color-pink: #f3268c;
+	--color-pink-rgb: 243, 38, 140;
+	--color-red: #df1529;
+	--color-red-rgb: 223, 21, 4;
+	--color-orange: #fd7e14;
+	--color-orange-rgb: 253, 126, 20;
+	--color-yellow: #ffc107;
+	--color-yellow-rgb: 255, 193, 7;
+	--color-green: #059652;
+	--color-green-rgb: 5, 150, 82;
+	--color-teal: #20c997;
+	--color-teal-rgb: 32, 201, 151;
+	--color-cyan: #0dcaf0;
+	--color-cyan-rgb: 13, 202, 240;
+	--color-white: #ffffff;
+	--color-white-rgb: 255, 255, 255;
+	--color-gray: #6c757d;
+	--color-gray-rgb: 108, 117, 125;
+	--color-black: #000000;
+	--color-black-rgb: 0, 0, 0;
+	--bs-blue: var(--color-blue);
+	--bs-indigo: var(--color-indigo);
+	--bs-purple: var(--color-purple);
+	--bs-pink: var(--color-pink);
+	--bs-red: var(--color-red);
+	--bs-orange: var(--color-orange);
+	--bs-yellow: var(--color-yellow);
+	--bs-green: var(--color-green);
+	--bs-teal: var(--color-teal);
+	--bs-cyan: var(--color-cyan);
+	--bs-white: var(--color-white);
+	--bs-gray: var(--color-gray);
+	--bs-gray-dark: #343a40;
+	--bs-gray-100: #f8f9fa;
+	--bs-gray-200: #e9ecef;
+	--bs-gray-300: #dee2e6;
+	--bs-gray-400: #ced4da;
+	--bs-gray-500: #adb5bd;
+	--bs-gray-600: #6c757d;
+	--bs-gray-700: #495057;
+	--bs-gray-800: #343a40;
+	--bs-gray-900: #212529;
+	--bs-primary: var(--color-blue);
+	--bs-secondary: var(--color-blue);
+	--bs-success: #198754;
+	--bs-info: #0dcaf0;
+	--bs-warning: #ffc107;
+	--bs-danger: #dc3545;
+	--bs-light: #f8f9fa;
+	--bs-dark: #212529;
+	--bs-primary-rgb: var(--color-primary-rgb);
+	--bs-secondary-rgb: var(--color-secondary-rgb);
+	--bs-success-rgb: 25, 135, 84;
+	--bs-info-rgb: 13, 202, 240;
+	--bs-warning-rgb: 255, 193, 7;
+	--bs-danger-rgb: 220, 53, 69;
+	--bs-light-rgb: 248, 249, 250;
+	--bs-dark-rgb: 33, 37, 41;
+	--bs-white-rgb: var(--color-white-rgb);
+	--bs-black-rgb: var(--color-black-rgb);
+	--bs-body-color-rgb: var(--color-default-rgb);
+	--bs-body-bg-rgb: 255, 255, 255;
+	--bs-font-sans-serif: var(--font-default);
+	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	--bs-body-font-family: var(--font-default);
+	--bs-body-font-size: 1rem;
+	--bs-body-font-weight: 400;
+	--bs-body-line-height: 1.5;
+	--bs-body-color: var(--color-default);
+	--bs-body-bg: #fff;
+}
+.font-default {
+	font-family: $font-family_1 !important;
+}
+.font-primary {
+	font-family: $font-family_2 !important;
+}
+.font-secondary {
+	font-family: $font-family_3 !important;
+}
+.color-default {
+	color: $color_1 !important;
+}
+.color-links {
+	color: $color_2 !important;
+	&:hover {
+		color: $color_3 !important;
+	}
+}
+.color-primary {
+	color: $color_4 !important;
+}
+.color-primary-light {
+	color: $color_5 !important;
+}
+.color-primary-dark {
+	color: $color_6 !important;
+}
+.color-secondary {
+	color: $color_7 !important;
+}
+.color-secondary-light {
+	color: $color_8 !important;
+}
+.color-secondary-dark {
+	color: $color_9 !important;
+}
+.color-blue {
+	color: $color_10 !important;
+}
+.color-indigo {
+	color: $color_11 !important;
+}
+.color-purple {
+	color: $color_12 !important;
+}
+.color-pink {
+	color: $color_13 !important;
+}
+.color-red {
+	color: $color_14 !important;
+}
+.color-orange {
+	color: $color_15 !important;
+}
+.color-yellow {
+	color: $color_16 !important;
+}
+.color-green {
+	color: $color_17 !important;
+}
+.color-teal {
+	color: $color_18 !important;
+}
+.color-cyan {
+	color: $color_19 !important;
+}
+.color-white {
+	color: $color_20 !important;
+}
+.color-gray {
+	color: $color_21 !important;
+}
+.color-black {
+	color: $color_22 !important;
+}
+.bg-default {
+	background-color: $background-color_1 !important;
+}
+.bg-primary {
+	background-color: $background-color_2 !important;
+}
+.bg-primary-light {
+	background-color: $background-color_3 !important;
+}
+.bg-primary-dark {
+	background-color: $background-color_4 !important;
+}
+.bg-secondary {
+	background-color: $background-color_5 !important;
+}
+.bg-secondary-light {
+	background-color: $background-color_6 !important;
+}
+.bg-secondary-dark {
+	background-color: $background-color_7 !important;
+}
+.bg-blue {
+	background-color: $background-color_8 !important;
+}
+.bg-indigo {
+	background-color: $background-color_9 !important;
+}
+.bg-purple {
+	background-color: $background-color_10 !important;
+}
+.bg-pink {
+	background-color: $background-color_11 !important;
+}
+.bg-red {
+	background-color: $background-color_12 !important;
+}
+.bg-orange {
+	background-color: $background-color_13 !important;
+}
+.bg-yellow {
+	background-color: $background-color_14 !important;
+}
+.bg-green {
+	background-color: $background-color_15 !important;
+}
+.bg-teal {
+	background-color: $background-color_16 !important;
+}
+.bg-cyan {
+	background-color: $background-color_17 !important;
+}
+.bg-white {
+	background-color: $background-color_18 !important;
+}
+.bg-gray {
+	background-color: $background-color_19 !important;
+}
+.bg-black {
+	background-color: $background-color_20 !important;
+}
